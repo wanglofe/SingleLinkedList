@@ -8,9 +8,12 @@ typedef struct sll {
 
 sll_t *sll_header = NULL;
 
-void insert_node(sll_t **sll, int val)
+int insert_node(sll_t **sll, int val)
 {
 	sll_t *newnode = malloc(sizeof(sll_t));
+	if(!newnode) {
+		return -1;
+	}
 	newnode->val = val;
 	newnode->next = NULL;
 	if(*sll == NULL) {
