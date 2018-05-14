@@ -25,6 +25,7 @@ int insert_node(sll_t **sll, int val)
 		}
 		tmp->next = newnode;
 	}
+	return 0;
 }
 
 int delete_node(sll_t **sll, int val)
