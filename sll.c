@@ -1,11 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// sll: single linked list
 typedef struct sll {
 	int val;
 	struct sll *next;
 } sll_t;
 
+// sll handler declarations
+int sll_insert(sll_t **sll, int val);
+int sll_delete(sll_t **sll, int val);
+int sll_destory(sll_t *sll);
+sll_t *sll_find(sll_t *sll, int val);
+int sll_replace(sll_t *sll, int origin, int after);
+sll_t *sll_reverse(sll_t *sll);
+size_t sll_length(sll_t *sll);
+void sll_print(sll_t *sll);
+
+
+// sll handler 
 int sll_insert(sll_t **sll, int val)
 {
 	sll_t *newnode = malloc(sizeof(sll_t));
@@ -142,6 +155,7 @@ void sll_print(sll_t *sll)
 	putchar('\n');
 }
 
+// sll handler test
 int main(void)
 {
 	int i;
