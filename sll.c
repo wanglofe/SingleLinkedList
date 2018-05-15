@@ -1,3 +1,6 @@
+// Author:	Kevin
+// Data:	20180515	
+
 #include <stdio.h>
 #include <stdlib.h>
 
