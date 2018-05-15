@@ -152,7 +152,10 @@ int main(void)
 	sll_print(sll);
 
 	printf("sll length: %d\n", sll_length(sll));
-//	sll_print(sll_reverse(sll));
+
+	/* sll_reverse will change origin sll */
+	sll = sll_reverse(sll);
+	sll_print(sll);
 
 	sll_delete(&sll, 10);
 	sll_delete(&sll, 0);
